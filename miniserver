@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while true; do
+    cat <<EOF | nc -l 8080
+HTTP/1.1 200 OK
+Content-Length: 3
+Content-Type: text/plain; charset=utf-8
+
+Hi!
+EOF
+done
